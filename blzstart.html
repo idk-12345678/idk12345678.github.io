@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <link href="blzstart.css" rel="stylesheet" type=text/css>
+            <title>Play Block Zapper</title>
+            <meta charset="utf-8">
+         </head>
+         <body>
+             <h1>Block Zapper</h1>
+             <p>Pick your character</p>
+             <button type="button" id="blue" onclick="characterSelect('blue')"></button>
+             <button  type="button" id="black" onclick="characterSelect('black')"></button>
+             <button type="button" id="green" onclick="characterSelect('green')"></button>
+             <br>
+             <br>
+             <br>
+             <br>
+             <button type="button" onclick="redirrules()">See the rules</button>
+             <button type="button" onclick="redir()">Play</button>
+             <p id=load></p>
+             <div id="loading-circle"></div>
+             <script>
+                 var charsel = false
+                 function redir(){
+                if(charsel === true){setTimeout(()=>{window.location.href = "game.html"}, 2000)
+                     document.getElementById("loading-circle").style.display="block"
+                     document.getElementById("load").innerHTML="Loading..."}else{alert("You must pick a character first!!")}
+                 }
+                 function characterSelect(character){
+                     var char
+                if(character=="black"){char=1}if(character=="blue"){char=2}if(character=="green"){char=3}
+                 console.log(char)
+                 document.getElementById("blue").remove()
+                 document.getElementById("black").remove()
+                 document.getElementById("green").remove()
+                 const odone = document.createElement("p");
+                 const done=document.createTextNode(`You picked ${character}`);
+                 odone.appendChild(done);
+                 const b1 = document.getElementById("black")   
+                 document.body.insertBefore(odone, b1)
+                 localStorage.setItem("character", char);
+                     charsel = true
+                 }
+                 function redirrules(){
+                     if(charsel === true){setTimeout(()=>{window.location.href = "rules.html"}, 2000)
+                     document.getElementById("loading-circle").style.display="block"
+                     document.getElementById("load").innerHTML="Loading..."}else{alert("You must pick a character first!!")}
+                 }
+             </script>
+         </body>
+         </html>
+         

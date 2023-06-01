@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+    <head>
+       <title>Score</title>
+        <meta charset="utf-8">
+        <style>
+            #printbutton{
+            background-color:blue;
+                border-radius:5px;
+                font-size:15px;
+                color:white;
+                border-color:rgb(201, 201, 201);
+            }
+                body{
+                background-image:url("scorebackground.jpg");
+                }
+            h1{
+            color:white;
+            } 
+            
+        </style>
+</head>
+<body>
+    
+    
+    <h1 id="scoreident">Your score is:</h1>    <h1 id="scoreheader"></h1>
+    <h1 id="endheader"></h1>
+    <button type="button" id="printbutton" onclick="printbutton()">Print</button>
+    <button type="button" onclick="redir()" id="redir">Go back to start</button>
+    <button type="button" onclick="redirh()" id="redirh">Go to Ishantgames home</button>
+    <script>
+        hscore=localStorage.getItem("highscore")
+var nscore=sessionStorage.getItem("score")
+document.getElementById("scoreheader").innerHTML = nscore
+        function printbutton(){
+        var removed=document.getElementById("printbutton")
+        var removed2=document.getElementById("redir")
+        var removed3=document.getElementById("redirh")
+            document.getElementById("printbutton").remove()
+            document.getElementById("redir").remove()
+            document.getElementById("redirh").remove()
+        document.getElementById("scoreident").innerHTML="I got a score of"
+        document.getElementById("endheader").innerHTML="on Block Zapper"
+            window.print()
+document.body.appendChild(removed)
+ document.getElementById("scoreident").innerHTML="Your score is:"   
+            document.getElementById("endheader").innerHTML=""
+            document.body.appendChild(removed2)
+             document.body.appendChild(removed3)
+        }
+        function redir(){
+        window.location.assign("blzstart.html")
+        }
+         function redirh(){
+        window.location.assign("ishantgames.html")
+        }
+</script></body>

@@ -1,0 +1,28 @@
+#block {
+    border:solid 1px black;
+    position:absolute;
+    top:400px;
+    width:30px;
+    height:30px;
+}
+#circle {
+width:10px;
+    height:10px;
+ -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+border-radius:5px;
+    background-color:red;
+    display:none;
+    position:relative;
+    left:0px;
+    top:0px;
+}
+hr{
+position:relative;
+  top:310px;  
+    height:5px;
+    background-color:black;
+}
+body{
+background-image:url(gamebackground.jpg);
+}

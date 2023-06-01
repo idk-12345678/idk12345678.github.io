@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+    <title>Play Tic-Tac-Toe</title>
+    <meta charset="utf-8">
+        <style>
+            table, td{
+            border:1px solid;
+            }
+            table{
+            border-spacing:0px;
+            }
+            td{
+            padding:60px;
+            }
+        </style>
+    </head>
+        <body>
+            <h1>Play Tic-Tac-Toe</h1>
+            <button onclick="window.location.href=window.location.href">Clear</button>
+            <button onclick ="redirfunc()">Ishantgames Home</button>
+            <table>
+                <tr>
+                    <td onclick="clicked(1)" id=1>
+                    <td onclick="clicked(2)"id=2>
+                    <td onclick="clicked(3)"id=3>
+                </tr>
+                <tr>
+                <td onclick="clicked(4)"id=4>
+                    <td onclick="clicked(5)"id=5>
+                        <td onclick="clicked(6)"id=6>
+                </tr>
+                <tr>
+                    <td onclick="clicked(7)"id=7>
+                        <td onclick="clicked(8)"id=8>
+                            <td onclick="clicked(9)"id=9>
+                </tr>
+            </table>
+            <h3 id="itis">It is</h3><h3 id="Person">O</h3><h3 id="turn">'s turn</h3>
+            <script src="ttstart.js"></script>  
+        </body>
+    </html>
